@@ -14,7 +14,6 @@ function App() {
         `https://api.edamam.com/api/recipes/v2?type=public&q=${wordSubmitted}&app_id=192a2186&app_key=c15a9aa5b96af4c261287ef3dc71548f`
       );
       const data = await answer.json();
-      console.log(data.hits);
       setRecipe(data.hits);
     };
     getRecipe();
@@ -22,7 +21,6 @@ function App() {
 
   const myProducts = (e) => {
     const product = e.target.value;
-    console.log(product);
     setSearch(product);
   };
 
